@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INGC App</title>
+</head>
+<body>
+<h1>Page des clients</h1>
+
+<br>
+
+<table>
+    <caption>Liste des clients</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Telephone</th>
+        <th>Rue</th>
+        <th>Ville</th>
+        <th>CP</th>
+        <th>Complément d'adresse</th>
+        <th>CodeClient</th>
+        <th>Qr_Code</th>
+    </tr>
+
+    {% for client in clients %}
+
+    <tr>
+        <th>{{ client.id }}</th>
+        <th>{{ client.prenomClient }}</th>
+        <th>{{ client.nomClient }}</th>
+        <th>{{ client.ageClient }}</th>
+        <th>{{ client.emailClient }}</th>
+        <th>{{ client.telClient }}</th>
+        <th>{{ client.rueClient }}</th>
+        <th>{{ client.villeClient }}</th>
+        <th>{{ client.cpClient}}</th>
+        <th>{{ client.appartementClient }}</th>
+        <th>{{ client.codeClient }}</th>
+        <th><img class="fit-picture"
+     src={{ client.qr_code.url }}
+     alt="QR_CODE de M / MME {{ client.nomClient }} {{ client.prenomClient }}"></th>
+    </tr>
+
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

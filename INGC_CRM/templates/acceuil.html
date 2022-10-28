@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INGC App</title>
+</head>
+<body>
+<h1> Page d'acceuil</h1>
+
+<table>
+    <caption>Liste des clients</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Telephone</th>
+    </tr>
+
+    {% for client in clients %}
+    <tr>
+        <th>{{ client.id }}</th>
+        <th>{{ client.prenomClient }}</th>
+        <th>{{ client.nomClient }}</th>
+        <th>{{ client.telClient }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<table>
+    <caption>Liste des employés</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Telephone</th>
+    </tr>
+
+     {% for employe in employes %}
+    <tr>
+        <th>{{ employe.id }}</th>
+        <th>{{ employe.prenomEmploye }}</th>
+        <th>{{ employe.nomEmploye }}</th>
+        <th>{{ employe.telEmploye }}</th>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+
+<table>
+    <caption>Liste des employés</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Heure Arrivée</th>
+        <th>Heure Départ</th>
+        <th>Employe</th>
+        <th>Client</th>
+    </tr>
+
+     {% for prestation in prestations %}
+    <tr>
+        <th>{{ prestation.id }}</th>
+        <th>{{ prestation.nomPrestation }}</th>
+        <th>{{ prestation.heureArrivee }}</th>
+        <th>{{ prestation.heureDepart }}</th>
+        <th>{{ prestation.employe }}</th>
+        <th>{{ prestation.client }}</th>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+</body>
+</html>

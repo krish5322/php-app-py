@@ -1,0 +1,1 @@
+python3 loginbackend/bruno-backend.py & /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

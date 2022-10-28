@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INGC App</title>
+</head>
+<body>
+<h1>Page des Prestations</h1>
+
+<br>
+
+<table>
+    <caption>Liste des employés</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Heure Arrivée</th>
+        <th>Heure Départ</th>
+        <th>Employe</th>
+        <th>Client</th>
+    </tr>
+
+     {% for prestation in prestations %}
+    <tr>
+        <th>{{ prestation.id }}</th>
+        <th>{{ prestation.nomPrestation }}</th>
+        <th>{{ prestation.heureArrivee }}</th>
+        <th>{{ prestation.heureDepart }}</th>
+        <th>{{ prestation.employe }}</th>
+        <th>{{ prestation.client }}</th>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

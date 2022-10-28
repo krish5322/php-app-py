@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INGC App</title>
+</head>
+<body>
+<h1>Page des employés</h1>
+
+<br>
+
+<table>
+    <caption>Liste des employés</caption>
+
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Telephone</th>
+        <th>Email</th>
+    </tr>
+
+     {% for employe in employes %}
+    <tr>
+        <th>{{ employe.id }}</th>
+        <th>{{ employe.nomEmploye }}</th>
+        <th>{{ employe.prenomEmploye }}</th>
+        <th>{{ employe.telEmploye }}</th>
+        <th>{{ employe.emailEmploye }}</th>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
